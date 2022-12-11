@@ -1,0 +1,28 @@
+<app-caracter-info-slider></app-caracter-info-slider>
+<div class="main">
+  <div class="main1">
+    <div class="card"
+    *ngFor="let i of Allalters_arr"
+    >
+      <img
+      [src]="i.image" class="card-img-top" alt="">
+      <div class="card-body"
+      >
+        <h5 class="card-title">{{i.name}}</h5>
+        <p class="card-text">{{i.location.name}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{i.species}}</li>
+        <li class="list-group-item">{{i.gender}}</li>
+        <li class="list-group-item">{{i.status}}</li>
+      </ul>
+      <div class="card-body">
+        <a class="card-link btn btn-dark btn-lg btn-block"
+        (click)="child($event)"
+        >
+          Show All Alters
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

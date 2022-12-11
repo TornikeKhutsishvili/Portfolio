@@ -1,0 +1,37 @@
+<div class="container">
+  <input [(ngModel)]="episodeNum" type="number" class="form-control" placeholder="enter episode number">
+  <button
+  (click)="getEpisode()"
+  class="btn btn-primary mt-2 form-control"
+  style="color: white; background-color: blue;"
+  >
+  Click
+  </button>
+</div>
+
+<div class="container">
+  <div class="cards">
+    <div class="card" *ngFor="let i of charactersArr; let ind = index">
+      <div class="card" style="width: 18rem">
+          <img [src]="i.image" class="card-img-top" [alt]="i.name" />
+        <div class="card-body">
+          <h5 class="card-title">{{ i.name }}</h5>
+          <p class="card-text">{{ i.location.name }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ i.species }}</li>
+          <li class="list-group-item">{{ i.gender }}</li>
+          <li class="list-group-item">{{ i.status }}</li>
+        </ul>
+        <div class="card-body">
+          <button class="card-link btn btn-dark btn-lg btn-block"
+          (click)="showAlters(ind)"
+          routerLink="/character-info"
+          >
+            Show all alters
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.characters-area{
+  width: 80%;
+  margin: auto;
+}
+.characters-area h1{
+margin: 100px 0px 40px 0px;
+font-size: 40px;
+color: #212529;
+}
+.fitler-area{
+margin-bottom: 50px;
+}
+.card-area{
+display: inline-flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}

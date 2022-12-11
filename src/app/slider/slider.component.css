@@ -1,0 +1,18 @@
+.w-100{
+  max-height: 650px;
+  width: 70% !important;
+  margin: auto;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 0.77;
+}
+#carouselExampleCaptions{
+  background: black;
+}
+.carousel-item h1{
+  font-size: 45px;
+}
+.carousel-item p{
+  font-size: 16px;
+}

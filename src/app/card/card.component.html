@@ -1,0 +1,43 @@
+<article class="filters">
+  <div class="form-group">
+    <input
+    (keyup)="inpt()"
+    [(ngModel)]="information"
+    type="text" class="form-control mt-2 m-auto inp" placeholder="Enter Character name">
+  </div>
+  <div class="form-group">
+    <select class="form-select mt-2 m-auto sel"
+    [(ngModel)]="genderSel"
+    (change)="Genders()"
+    >
+      <option value="" disabled selected hidden>All</option>
+      <option value="">All</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+</article>
+<div class="card"
+*ngFor="let i of arr2; let x = index;"
+>
+  <img
+  [src]="i.image" class="card-img-top" [alt]="i.name">
+  <div class="card-body"
+  >
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.location.name}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{i.species}}</li>
+    <li class="list-group-item">{{i.gender}}</li>
+    <li class="list-group-item">{{i.status}}</li>
+  </ul>
+  <div class="card-body">
+    <a class="card-link btn btn-dark btn-lg btn-block"
+    (click)="AltersChild(x)"
+    routerLink="/character-info"
+    >
+      Show All Alters
+    </a>
+  </div>
+</div>
